@@ -18,7 +18,7 @@ Test the Vuejs container by running it. It should be visible at localhost:8080
 $ docker run -p 8080:80 {yourDockerUsername}/vuejs-app:1.0.0
 ```
 
-Push
+Push the container to your Docker Hub account repository
 
 ```zsh
 $ docker push {yourDockerUsername}/vuejs-app:1.0.0
