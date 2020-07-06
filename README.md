@@ -1,24 +1,25 @@
-# vue-k8s
+#### Dockerizing a Vuejs app
 
-## Project setup
-```
-npm install
-```
+Login to Docker Hub
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+```zsh
+$ docker login
 ```
 
-### Compiles and minifies for production
-```
-npm run build
+create a Vuejs container
+
+```zsh
+$ docker build -t {yourDockerUsername}/vuejs-app:1.0.0 .
 ```
 
-### Lints and fixes files
-```
-npm run lint
+Test the Vuejs container by running it. It should be visible at localhost:8080
+
+```zsh
+$ docker run -p 8080:80 {yourDockerUsername}/vuejs-app:1.0.0
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Push
+
+```zsh
+$ docker push {yourDockerUsername}/vuejs-app:1.0.0
+```
